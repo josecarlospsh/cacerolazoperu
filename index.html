@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="@josecarlospsh" />
+    <meta
+      name="description"
+      content="Cacerolazo por el Perú #MerinoNoEsMiPresidente"
+    />
+    <title>Cacerolazo por el Perú #MerinoNoEsMiPresidente</title>
+    <meta property="og:title" content="Cacerolazo por el Perú #MerinoNoEsMiPresidente" />
+    <meta
+      property="og:description"
+      content="Cacerolazo por el Perú #MerinoNoEsMiPresidente"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cacerolazoperu.com" />
+    <meta property="og:image" content="img/cacerolazo1.png" />
+    <meta name="twitter:url" content="https://cacerolazoperu.com" />
+    <meta name="twitter:title" content="Cacerolazo por el Perú #MerinoNoEsMiPresidente" />
+    <meta
+      name="twitter:description"
+      content="Cacerolazo por el Perú #MerinoNoEsMiPresidente"
+    />
+    <meta name="twitter:image" content="img/cacerolazo1.png" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Cabin:ital,wght@0,400;0,600;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-182997638-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-182997638-1');
+    </script>
+  </head>
+  <body>
+    <section class="container">
+        <div class="hero">
+          <div class="date">2020</div>
+          <h1 class="text">Cacerolazo por el Perú <img src="img/bandera_peru.png" class="flag" alt="Perú"><br><span class="hashtag">#MerinoNoEsMiPresidente</span></h1>
+          <div class="links">
+            <span>Comparte:</span> 
+            <a rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https://cacerolazoperu.com" target="_blank"
+              >Facebook</a>
+              <a rel="noopener" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcacerolazoperu.com&text=Cacerolazo%20por%20el%20Per%C3%BA%20%23MerinoNoEsMiPresidente" target="_blank"
+              >Twitter</a>
+              <a rel="noopener" href="https://api.whatsapp.com/send?text=Cacerolazo%20por%20el%20Per%C3%BA%20%23MerinoNoEsMiPresidente%20https%3A%2F%2Fcacerolazoperu.com" target="_blank"
+              >Whatsapp</a>
+              <a rel="noopener" href="mailto:?&subject=&body=Cacerolazo%20por%20el%20Per%C3%BA%20%23MerinoNoEsMiPresidente%20https%3A%2F%2Fcacerolazoperu.com" target="_blank"
+              >Email</a>
+          </div>
+        </div>
+        <div class="cacerolazo">
+            <div class="cta"><strong>↓</strong></div>
+            <img
+            src="img/cacerolazo1.png"
+            alt="CACEROLAZO POR EL PERÚ"
+            class="img-cacerola"
+            data-credits="https://www.behance.net/gallery/90579263/Cacerolazo"
+            />
+            <div class="cta"><strong>↑</strong><br>Dale play</div>
+        </div>
+        <audio id="audio" preload loop>
+            <source src="audio/cacerolazo1.mp3" type="audio/mp3">
+        </audio>
+    </section>
+    <script>
+        const audio = document.getElementById('audio')
+        const cacerolazo = document.querySelector('.img-cacerola')
+        cacerolazo.addEventListener('click', function(e){
+            e.preventDefault();
+            if (!audio.paused) {
+                audio.pause();
+            }else {
+                audio.play();
+            }
+        })
+        console.log("%cVIVA EL PERÚ CARAJO!!!", "color:#dc0000;font-size: 20px");
+    </script>
+  </body>
+</html>

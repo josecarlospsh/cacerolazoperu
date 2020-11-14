@@ -1,0 +1,95 @@
+$color-gray: #444;
+$color-black: #000;
+$color-white: #fff;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Cabin", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  background-color: $color-white;
+  color: $color-black;
+}
+.container {
+  position: relative;
+  max-width: 750px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.cacerolazo {
+  text-align: center;
+  .img-cacerola {
+    width: 16rem;
+    height: 15rem;
+    cursor: pointer;
+    object-fit: cover;
+    @media (min-width: 768px) {
+      width: 32rem;
+      height: 30rem;
+    }
+  }
+  .cta {
+    font-size: 1rem;
+  }
+}
+.hero {
+  text-align: center;
+  padding: 1rem;
+  .date {
+    text-transform: uppercase;
+    color: $color-gray;
+    font-size: 0.8rem;
+  }
+  .text {
+    font-family: "Alata", sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+    }
+    .flag {
+      display: inline-block;
+      vertical-align: middle;
+      width: 2.2rem;
+    }
+    .hashtag {
+      background-color: $color-black;
+      color: $color-white;
+    }
+  }
+  .links {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    @media (min-width: 768px) {
+      font-size: 1.25rem;
+    }
+    span {
+      font-weight: 600;
+      display: block;
+      @media (min-width: 768px) {
+        display: inline-block;
+      }
+    }
+    a {
+      margin: 0.3rem;
+      color: $color-gray;
+      text-decoration-style: dotted;
+      text-decoration-line: underline;
+      @media (min-width: 768px) {
+        margin: 0.5rem;
+      }
+    }
+  }
+}
+#audio {
+  display: none;
+}
