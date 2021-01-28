@@ -6,22 +6,22 @@
     <meta name="author" content="@josecarlospsh" />
     <meta
       name="description"
-      content="Cacerolazo por el Perú #MerinoNoEsMiPresidente"
+      content="Cacerolazo por el Perú"
     />
-    <title>Cacerolazo por el Perú #MerinoNoEsMiPresidente</title>
-    <meta property="og:title" content="Cacerolazo por el Perú #MerinoNoEsMiPresidente" />
+    <title>Cacerolazo por el Perú</title>
+    <meta property="og:title" content="Cacerolazo por el Perú" />
     <meta
       property="og:description"
-      content="Cacerolazo por el Perú #MerinoNoEsMiPresidente"
+      content="Cacerolazo por el Perú"
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://cacerolazoperu.com" />
     <meta property="og:image" content="img/cacerolazo1.png" />
     <meta name="twitter:url" content="https://cacerolazoperu.com" />
-    <meta name="twitter:title" content="Cacerolazo por el Perú #MerinoNoEsMiPresidente" />
+    <meta name="twitter:title" content="Cacerolazo por el Perú" />
     <meta
       name="twitter:description"
-      content="Cacerolazo por el Perú #MerinoNoEsMiPresidente"
+      content="Cacerolazo por el Perú"
     />
     <meta name="twitter:image" content="img/cacerolazo1.png" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -42,17 +42,17 @@
   <body>
     <section class="container">
         <div class="hero">
-          <div class="date">2020</div>
-          <h1 class="text">Cacerolazo por el Perú <img src="img/bandera_peru.png" class="flag" alt="Perú"><br><span class="hashtag">#MerinoNoEsMiPresidente</span></h1>
+          <div id="year" class="date">2020</div>
+          <h1 class="text">Cacerolazo por el Perú <img src="img/bandera_peru.png" class="flag" alt="Perú"><br><span class="hashtag"></span></h1>
           <div class="links">
             <span>Comparte:</span> 
             <a rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https://cacerolazoperu.com" target="_blank"
               >Facebook</a>
-              <a rel="noopener" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcacerolazoperu.com&text=Cacerolazo%20por%20el%20Per%C3%BA%20%23MerinoNoEsMiPresidente" target="_blank"
+              <a rel="noopener" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcacerolazoperu.com&text=Cacerolazo%20por%20el%20Per%C3%BA%20" target="_blank"
               >Twitter</a>
-              <a rel="noopener" href="https://api.whatsapp.com/send?text=Cacerolazo%20por%20el%20Per%C3%BA%20%23MerinoNoEsMiPresidente%20https%3A%2F%2Fcacerolazoperu.com" target="_blank"
+              <a rel="noopener" href="https://api.whatsapp.com/send?text=Cacerolazo%20por%20el%20Per%C3%BA%20https%3A%2F%2Fcacerolazoperu.com" target="_blank"
               >Whatsapp</a>
-              <a rel="noopener" href="mailto:?&subject=&body=Cacerolazo%20por%20el%20Per%C3%BA%20%23MerinoNoEsMiPresidente%20https%3A%2F%2Fcacerolazoperu.com" target="_blank"
+              <a rel="noopener" href="mailto:?&subject=&body=Cacerolazo%20por%20el%20Per%C3%BA%20https%3A%2F%2Fcacerolazoperu.com" target="_blank"
               >Email</a>
           </div>
         </div>
@@ -75,12 +75,21 @@
         const cacerolazo = document.querySelector('.img-cacerola')
         cacerolazo.addEventListener('click', function(e){
             e.preventDefault();
+            audio.ontimeupdate = function(i) {
+            if((this.currentTime / this.duration) > 0.9){
+                this.currentTime = 2;
+                this.play();
+                }
+            };
             if (!audio.paused) {
                 audio.pause();
             }else {
                 audio.play();
             }
         })
+        const date = new Date()
+        const year = date.getFullYear()
+        document.getElementById('year').innerHTML = year
         console.log("%cVIVA EL PERÚ CARAJO!!!", "color:#dc0000;font-size: 20px");
     </script>
   </body>
